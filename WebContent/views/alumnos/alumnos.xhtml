@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Lista de Alumnos</title>
+<link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+<script src="../../js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<f:view>
+			<h3>BIENVENIDO #{user.nombre} A LA APPLICACIÓN WEB</h3>
+			<h:form>
+				<h:dataTable value="#{alumnoBO.alumnos}" var="alumno"
+					class="table table-striped table-hover">
+					<h:column>
+						<f:facet name="header">ID</f:facet>    				
+               #{alumno.id}
+            </h:column>
+					<h:column>
+						<f:facet name="header">Nombre</f:facet>    				
+               #{alumno.nombre}
+            </h:column>
+					<h:column>
+						<f:facet name="header">Matricula</f:facet>    				
+               #{alumno.matricula}
+            </h:column>
+					<h:column>
+						<f:facet name="header">Carrera</f:facet>    				
+               #{alumno.carrera}
+            </h:column>
+					<h:column>
+						<f:facet name="header">Semestre</f:facet>    				
+               #{alumno.semestre}
+            </h:column>
+					<h:column>
+						<f:facet name="header">Editar</f:facet>
+						<h:commandButton action="#{alumnoBO.edit(alumno.matricula)}" value="Editar"
+							class="btn btn-info" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">Eliminar</f:facet>
+						<h:commandButton action="#{alumnoBO.eliminar(alumno.matricula)}" value="Eliminar"
+							class="btn btn-info" />
+					</h:column>
+				</h:dataTable>
+
+				<h:commandLink action="add" value="Nuevo" class="btn btn-info" />
+			</h:form>
+		</f:view>
+	</div>
+</body>
+</html>

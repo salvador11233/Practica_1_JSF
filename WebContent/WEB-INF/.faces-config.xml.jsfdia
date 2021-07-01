@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#views#alumnos#add.xhtml"
+  PATH="/views/alumnos/add.xhtml" SHAPE="32,673,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#views#alumnos#add.xhtml:0" NAME="item"
+   PATH="/views/alumnos/add.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="save::#views#alumnos#alumnos.xhtml"
+    NAME="output" PATH="/views/alumnos/alumnos.xhtml"
+    TARGET="rules:#views#alumnos#alumnos.xhtml" TITLE="save" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#views#alumnos#alumnos.xhtml"
+  PATH="/views/alumnos/alumnos.xhtml" SHAPE="240,801,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#views#alumnos#alumnos.xhtml:0" NAME="item"
+   PATH="/views/alumnos/alumnos.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="add::#views#alumnos#add.xhtml" NAME="output"
+    PATH="/views/alumnos/add.xhtml"
+    TARGET="rules:#views#alumnos#add.xhtml" TITLE="add" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="edit::#views#alumnos#add.xhtml"
+    NAME="output1" PATH="/views/alumnos/add.xhtml"
+    TARGET="rules:#views#alumnos#add.xhtml" TITLE="edit" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="delete::#views#alumnos#alumnos.xhtml"
+    NAME="output2" PATH="/views/alumnos/alumnos.xhtml"
+    TARGET="rules:#views#alumnos#alumnos.xhtml" TITLE="delete" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#index.xhtml" PATH="/index.xhtml"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#index.xhtml:0" NAME="item"
+   PATH="/index.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="welcome::#views#index.xhtml" NAME="output"
+    PATH="/views/index.xhtml" TARGET="rules:#views#index.xhtml"
+    TITLE="welcome" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#views#index.xhtml" PATH="/views/index.xhtml"
+  SHAPE="240,993,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

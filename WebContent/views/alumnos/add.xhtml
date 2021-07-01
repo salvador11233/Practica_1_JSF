@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Nuevo Alumno</title>
+	<link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+	<script src="../../js/bootstrap.bundle.min.js"></script>
+</h:head>
+<body>
+	<div class="container-fluid">
+		<f:view>
+			<h3>Nuevo Alumno</h3>
+			<h:form>
+				<div class="mb-3">
+					<label for="nombre" class="form-label">Nombre:</label>
+					<h:inputText class="form-control" id="nombre"
+						value="#{alumnoBO.alumno.nombre}" />
+				</div>
+				<div class="mb-3">
+					<label for="apellido_paterno" class="form-label">Apellido
+						Paterno:</label>
+					<h:inputText class="form-control" id="apellido_paterno"
+						value="#{alumnoBO.alumno.apellido_paterno}" />
+				</div>
+				<div class="mb-3">
+					<label for="apellido_materno" class="form-label">Apellido
+						Materno:</label>
+					<h:inputText class="form-control" id="apellido_materno"
+						value="#{alumnoBO.alumno.apellido_materno}" />
+				</div>
+				<div class="mb-3">
+					<label for="curp" class="form-label">Curp:</label>
+					<h:inputText class="form-control" id="curp"
+						value="#{alumnoBO.alumno.curp}" />
+				</div>
+				<div class="mb-3">
+					<label for="asentamiento" class="form-label">Asentamiento:</label>
+					<h:inputText class="form-control" id="asentamiento"
+						value="#{alumnoBO.alumno.asentamiento}" />
+				</div>
+				<div class="mb-3">
+					<label for="domicilio" class="form-label">Domicilio:</label>
+					<h:inputText class="form-control" id="domiciñio"
+						value="#{alumnoBO.alumno.domicilio}" />
+				</div>
+				<div class="mb-3">
+					<label for="email" class="form-label">Email:</label>
+					<h:inputText class="form-control" id="email"
+						value="#{alumnoBO.alumno.email}" />
+				</div>
+				<div class="mb-3">
+					<label for="telefono_fijo" class="form-label">Teléfono
+						Fijo:</label>
+					<h:inputText class="form-control" id="telefono_fijo"
+						value="#{alumnoBO.alumno.telefono_fijo}" />
+				</div>
+				<div class="mb-3">
+					<label for="telefono_celular" class="form-label">Teléfono
+						Celular:</label>
+					<h:inputText class="form-control" id="telefono_celular"
+						value="#{alumnoBO.alumno.telefono_celular}" />
+				</div>
+				<div class="mb-3">
+					<label for="matricula" class="form-label">Matricula:</label>
+					<h:inputText class="form-control" id="matricula"
+						value="#{alumnoBO.alumno.matricula}" />
+				</div>
+				<div class="mb-3">
+					<label for="carrera" class="form-label">Carrera:</label>
+					<h:inputText class="form-control" id="carrera"
+						value="#{alumnoBO.alumno.carrera}" />
+				</div>
+				<div class="mb-3">
+					<label for="semestre" class="form-label">Semestre:</label>
+					<h:inputText class="form-control" id="semestre"
+						value="#{alumnoBO.alumno.semestre}" />
+				</div>
+				<h:commandLink action="#{alumnoBO.save}" value="Guardar"
+					class="btn btn-info" />
+			</h:form>
+		</f:view>
+	</div>
+</body>
+</html>
